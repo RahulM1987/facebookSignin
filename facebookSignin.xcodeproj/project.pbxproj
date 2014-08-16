@@ -19,6 +19,9 @@
 		5F08B852198DFE6000788E19 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F08B83A198DFE6000788E19 /* UIKit.framework */; };
 		5F08B85A198DFE6000788E19 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F08B858198DFE6000788E19 /* InfoPlist.strings */; };
 		5F08B85C198DFE6000788E19 /* facebookSigninTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F08B85B198DFE6000788E19 /* facebookSigninTests.m */; };
+		5F08B866198DFF1E00788E19 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F08B865198DFF1E00788E19 /* FacebookSDK.framework */; };
+		5F08B86A198E023200788E19 /* FBLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F08B868198E023200788E19 /* FBLogin.m */; };
+		5F08B86B198E023200788E19 /* FBLogin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F08B869198E023200788E19 /* FBLogin.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,10 @@
 		5F08B857198DFE6000788E19 /* facebookSigninTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "facebookSigninTests-Info.plist"; sourceTree = "<group>"; };
 		5F08B859198DFE6000788E19 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5F08B85B198DFE6000788E19 /* facebookSigninTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = facebookSigninTests.m; sourceTree = "<group>"; };
+		5F08B865198DFF1E00788E19 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		5F08B867198E023200788E19 /* FBLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLogin.h; sourceTree = "<group>"; };
+		5F08B868198E023200788E19 /* FBLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLogin.m; sourceTree = "<group>"; };
+		5F08B869198E023200788E19 /* FBLogin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FBLogin.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F08B839198DFE6000788E19 /* CoreGraphics.framework in Frameworks */,
+				5F08B866198DFF1E00788E19 /* FacebookSDK.framework in Frameworks */,
 				5F08B83B198DFE6000788E19 /* UIKit.framework in Frameworks */,
 				5F08B837198DFE6000788E19 /* Foundation.framework in Frameworks */,
 			);
@@ -96,6 +104,7 @@
 		5F08B835198DFE6000788E19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5F08B865198DFF1E00788E19 /* FacebookSDK.framework */,
 				5F08B836198DFE6000788E19 /* Foundation.framework */,
 				5F08B838198DFE6000788E19 /* CoreGraphics.framework */,
 				5F08B83A198DFE6000788E19 /* UIKit.framework */,
@@ -109,6 +118,9 @@
 			children = (
 				5F08B845198DFE6000788E19 /* MainAppDelegate.h */,
 				5F08B846198DFE6000788E19 /* MainAppDelegate.m */,
+				5F08B867198E023200788E19 /* FBLogin.h */,
+				5F08B868198E023200788E19 /* FBLogin.m */,
+				5F08B869198E023200788E19 /* FBLogin.xib */,
 				5F08B848198DFE6000788E19 /* Images.xcassets */,
 				5F08B83D198DFE6000788E19 /* Supporting Files */,
 			);
@@ -222,6 +234,7 @@
 			files = (
 				5F08B841198DFE6000788E19 /* InfoPlist.strings in Resources */,
 				5F08B849198DFE6000788E19 /* Images.xcassets in Resources */,
+				5F08B86B198E023200788E19 /* FBLogin.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +255,7 @@
 			files = (
 				5F08B843198DFE6000788E19 /* main.m in Sources */,
 				5F08B847198DFE6000788E19 /* MainAppDelegate.m in Sources */,
+				5F08B86A198E023200788E19 /* FBLogin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +372,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "facebookSignin/facebookSignin-Prefix.pch";
 				INFOPLIST_FILE = "facebookSignin/facebookSignin-Info.plist";
@@ -371,6 +389,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "facebookSignin/facebookSignin-Prefix.pch";
 				INFOPLIST_FILE = "facebookSignin/facebookSignin-Info.plist";
